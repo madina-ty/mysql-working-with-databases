@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Создать новый пост</title>
+</head>
+<body>
+    <form id="postForm" action="/addpost"> 
+        <label for="author">Автор:</label>
+        <input type="text" id="author" name="author" required>
+
+        <label for="text">Текст поста:</label>
+        <textarea id="text" name="text" required></textarea>
+
+        <label for="url">URL изображения:</label>
+        <input type="url" id="url" name="image_url" required>
+
+        <button type="submit">Создать пост</button>
+    </form>
+    <script src="./client.js">
+    </script> </body>
+</html>
+
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      border: 1px solid #ccc;
+      padding: 1rem;
+      width: 400px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="url"],
+    textarea {
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      width: 100%;
+    }
+
+    button {
+      background-color: #4CAF50; 
+      border: none;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #3e8e41; 
+    }
+  </style>
